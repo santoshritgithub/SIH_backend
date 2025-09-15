@@ -73,6 +73,8 @@ app.use(morgan("dev"));
 // ====== CORS Config ======
 const allowedOrigins = [
   "https://cute-meerkat-09e723.netlify.app", // your Netlify frontend
+  "http://localhost:5173", // local development
+  "http://localhost:3000", // alternative local port
 ];
 
 app.use(

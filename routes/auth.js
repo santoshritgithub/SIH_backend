@@ -169,7 +169,7 @@ router.post("/google", async (req, res) => {
 
     // Issue JWT and return user
     const jwtToken = signToken(user._id);
-    res.json({ token: jwtToken, user: { id: user._1d, name: user.name, email: user.email, avatar: user.avatar } });
+    res.json({ token: jwtToken, user: { id: user._id, name: user.name, email: user.email, avatar: user.avatar } });
   } catch (err) {
     console.error("Google auth failed:", err);
     res.status(500).json({ message: "Google authentication failed", error: err.message });
